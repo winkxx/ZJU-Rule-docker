@@ -1,8 +1,8 @@
 # 广告列表 adblock rules
 # 内容：EasyListChina列表，只包含ABP中的 EasyListChina 内容
 # 来源：https://easylist-downloads.adblockplus.org/easylistchina.txt
-# 更新：2023-03-11 22:07:24
-# 数量：7434条
+# 更新：2023-03-12 13:02:45
+# 数量：7443条
 
 DOMAIN-SUFFIX,001adafg.xyz
 DOMAIN-SUFFIX,0024aaaa.com
@@ -836,6 +836,7 @@ DOMAIN-SUFFIX,aengbalz.fun
 DOMAIN-SUFFIX,afdplay.xyz
 DOMAIN-SUFFIX,affiliate6.com
 DOMAIN-SUFFIX,afij001.xyz
+DOMAIN-SUFFIX,afitye.xyz
 DOMAIN-SUFFIX,afj0.com
 DOMAIN-SUFFIX,afjk001.xyz
 DOMAIN-SUFFIX,afjlb.com
@@ -1613,6 +1614,7 @@ DOMAIN-SUFFIX,cp.7y7.com
 DOMAIN-SUFFIX,cp.jfcdns.com
 DOMAIN-SUFFIX,cp.qbaobei.com
 DOMAIN-SUFFIX,cp2.eastmoney.com
+DOMAIN-SUFFIX,cpawe.cyou
 DOMAIN-SUFFIX,cpgo.xyz
 DOMAIN-SUFFIX,cpm.cm.kankan.com
 DOMAIN-SUFFIX,cppwd2ahf.xyz
@@ -1638,6 +1640,7 @@ DOMAIN-SUFFIX,creawww.top
 DOMAIN-SUFFIX,crfrf.com
 DOMAIN-SUFFIX,crleii.xyz
 DOMAIN-SUFFIX,crobotb.com
+DOMAIN-SUFFIX,crpvoxl.cn
 DOMAIN-SUFFIX,cruiseeagle.hk
 DOMAIN-SUFFIX,csdn.love
 DOMAIN-SUFFIX,csekct.xyz
@@ -2241,6 +2244,7 @@ DOMAIN-SUFFIX,faw7.top
 DOMAIN-SUFFIX,fawu.asia
 DOMAIN-SUFFIX,fbhepgb.cn
 DOMAIN-SUFFIX,fbwvly.cn
+DOMAIN-SUFFIX,fcgphtr.cn
 DOMAIN-SUFFIX,fchio.com
 DOMAIN-SUFFIX,fcluqg.cn
 DOMAIN-SUFFIX,fcqztan.cn
@@ -3427,6 +3431,7 @@ DOMAIN-SUFFIX,jiudiandyw.com
 DOMAIN-SUFFIX,jiuku.pw
 DOMAIN-SUFFIX,jiulela.ltd
 DOMAIN-SUFFIX,jiulingdl.cn
+DOMAIN-SUFFIX,jiumao20230305.live
 DOMAIN-SUFFIX,jiutiao20221212.xyz
 DOMAIN-SUFFIX,jiutou20230210.live
 DOMAIN-SUFFIX,jiwekawe.top
@@ -4045,6 +4050,7 @@ DOMAIN-SUFFIX,luoshihua.club
 DOMAIN-SUFFIX,luotuoma.center
 DOMAIN-SUFFIX,luotuoma.cool
 DOMAIN-SUFFIX,luotuoma.xin
+DOMAIN-SUFFIX,luwenhao.ltd
 DOMAIN-SUFFIX,luyouxi.cn
 DOMAIN-SUFFIX,luyuheng.love
 DOMAIN-SUFFIX,lv-xin.cn
@@ -4775,6 +4781,7 @@ DOMAIN-SUFFIX,phcoal.com
 DOMAIN-SUFFIX,phpad.cqnews.net
 DOMAIN-SUFFIX,phsidmk.cn
 DOMAIN-SUFFIX,piaososo.co
+DOMAIN-SUFFIX,piaozhouyyds.com
 DOMAIN-SUFFIX,pic.0597kk.com
 DOMAIN-SUFFIX,pic.baihuawen.cn
 DOMAIN-SUFFIX,pic.fengniao.com
@@ -5865,6 +5872,7 @@ DOMAIN-SUFFIX,tprwnvk.cn
 DOMAIN-SUFFIX,tptp001.buzz
 DOMAIN-SUFFIX,tpvdcqw.cn
 DOMAIN-SUFFIX,tqnggnsi.fun
+DOMAIN-SUFFIX,traktalent.com
 DOMAIN-SUFFIX,travescorylus.com
 DOMAIN-SUFFIX,trdzgpx.cn
 DOMAIN-SUFFIX,trenhdg.com
@@ -5889,6 +5897,7 @@ DOMAIN-SUFFIX,tt14q0p2.cn
 DOMAIN-SUFFIX,tt4266acb88a1.ltd
 DOMAIN-SUFFIX,ttbc33.com
 DOMAIN-SUFFIX,ttdds.top
+DOMAIN-SUFFIX,ttdydd.xyz
 DOMAIN-SUFFIX,ttfkof.xyz
 DOMAIN-SUFFIX,tttppp.oss-cn-guangzhou.aliyuncs.com
 DOMAIN-SUFFIX,ttwwy.top
