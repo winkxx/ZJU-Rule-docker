@@ -1484,7 +1484,7 @@
 
 # Adblock Rules
 # 内容：EasyList + EasyListChina + EasyPrivacy列表
-# 数量：44086条
+# 数量：44089条
 (^|\.)0-000\.store$
 (^|\.)0-owazo4\.net\.zooplus\.de$
 (^|\.)0\.data\.net\.zooplus\.de$
@@ -2018,6 +2018,7 @@
 (^|\.)22lmsi1t5\.de$
 (^|\.)23182b9851\.com$
 (^|\.)2329\.ink$
+(^|\.)233a\.luyouwang\.com$
 (^|\.)23456dj\.com$
 (^|\.)23532451\.com$
 (^|\.)23539355\.com$
@@ -30624,6 +30625,7 @@
 (^|\.)pubasks\.com$
 (^|\.)pubfeed\.linkby\.com$
 (^|\.)pubfruitlesswording\.com$
+(^|\.)pubgw\.yahoo\.com$
 (^|\.)pubhotmax\.com$
 (^|\.)publicsparedpen\.com$
 (^|\.)publicunloadbags\.com$
@@ -34472,6 +34474,7 @@
 (^|\.)sittingfoot\.com$
 (^|\.)situatebullied\.com$
 (^|\.)siuscs\.xyz$
+(^|\.)siwei\.pub$
 (^|\.)six9e\.canal\.fr$
 (^|\.)sixarwr\.cn$
 (^|\.)sixft-apart\.com$

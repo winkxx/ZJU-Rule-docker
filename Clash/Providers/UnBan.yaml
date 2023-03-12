@@ -23,7 +23,6 @@ payload:
   - DOMAIN,vd.l.qq.com
 
   # Strava
-  - DOMAIN,analytics.strava.com
 
   # Umeng
   - DOMAIN,errlog.umeng.com
