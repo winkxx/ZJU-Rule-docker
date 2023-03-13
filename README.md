@@ -1,140 +1,83 @@
-# SSR去广告规则/GFWList规则/Clash规则碎片
+# ZJU Rule
 
-* 项目基于CC-BY-SA-4.0协议发布  [![CC-BY-SA-4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
-* 仅推荐未root的安卓手机使用。
-* Telegram频道订阅地址：**[https://t.me/ACL4SSR](https://t.me/ACL4SSR)**
-* [关于中国的互联网](https://github.com/ACL4SSR/ACL4SSR/wiki/关于中国的互联网)
+基于 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master) 修改后的 ZJU 分流规则
+
+项目使用 CC-BY-SA-4.0 协议发布 [![CC-BY-SA-4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
+
+**[电报交流群](https://t.me/zjuers)**，欢迎来自 ZJU 的使用者加入交流
+
+## 支持功能
+
++ ZJU 内网资源/学术资源分流（直连访问/内网穿透访问）
++ 节点自动选择
++ 节点故障转移
++ 节点负载均衡
++ Telegram 分流
++ Youtube 分流
++ Netflix 分流
++ 动画疯分流
++ 哔哩哔哩分流（解锁港澳台）
++ Google 服务分流
++ OneDrive 分流
++ Microsoft 服务分流
++ Apple 服务分流
++ 游戏平台分流（Steam/Epic/Sony）
++ 网易云音乐分流（灰色歌曲解锁）
++ 广告拦截/应用净化/AdBlock/隐私防护
++ 节点分地区管理（香港/日本/美国/台湾/狮城/韩国）
++ ...
+
+## 使用方法
+
+### 安装 Clash
+
++ 使用 [Clash](https://github.com/Dreamacro/clash) 作为代理工具，此工具支持 SS/SSR/V2Ray/Trojan/HTTP/HTTPS/SOCKS 等多种协议。不同平台的客户端如下：
+
+  + Windows: [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+  + Mac: [ClashX](https://github.com/yichengchen/clashX/releases)（推荐） 或 [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+  + Android/HarmonyOS: [Clash for Android](https://github.com/Kr328/ClashForAndroid/releases)
+
++ （可不做）建议取消客户端默认开启的绕过 10.0.0.0/8 IP 段功能。10.0.0.0/8 作为 ZJU 内网 IP 段，已在 ZJU Rule 中进行正确配置。取消绕过该段后，该段将由订阅中的规则管理，可以实现在 Clash 中内网穿透等高级功能。以 Clash for Windows 为例，编辑 Settings - Bypass Domain/IPNet，去除以 10 开头的行
+
+### 转换订阅链接
+
++ 无论机场提供的订阅链接是 SS/SSR/V2Ray 等订阅链接，还是 Clash 订阅链接，都需要提取出其中的节点信息，再按照 ZJU Rule 进行处理，生成处理后的 Clash 订阅链接
+
++ 订阅转换需要使用 [subconverter](https://github.com/tindy2013/subconverter)。subconverter 的部署较为复杂，推荐使用已部署完成的公用 ZJU Rule 转换服务。也可以自己搭建 subconverter 并使用 ZJU Rule 规则进行订阅转换
+
++ 下面介绍如何使用公用 ZJU Rule 转换服务：
+
+  + 打开 [ZJU Rule 转换网站](https://zjurule.xyz/)
+  + 粘贴机场提供的订阅链接（可以分行粘贴多个），点击生成订阅链接即可生成转换后的订阅链接
+  + 在 Clash 客户端中添加上一步得到的链接。以 Windows 版为例，点击 Profiles，将链接粘贴到上方的框中，点击 Download 按钮
+  + 推荐设置为每小时更新一次，以同步机场配置文件和 ZJU Rule 的更改。以 Windows 版为例，在配置上右键 - Settings，设置 Update Interval (hour) 为 1
+
+### 配置分流方式
+
+![](docs/clash.png)
+
+Clash 采用继承的分流配置方式，例如，巴哈姆特设置为使用台湾节点，则将使用台湾节点分组中选中的节点进行代理。可以根据自己的需要进行配置，如将哔哩哔哩配置为香港/台湾节点以访问港澳台资源
+
+## 常见问题
+
++ 我不喜欢生成的规则/分组太复杂，可以更改吗？
+
+  公用转换服务使用 [ZJU.ini](https://github.com/ZJU-Rule/ZJU-Rule/blob/master/Clash/config/ZJU.ini) 作为规则分组文件。该文件修改自 [ACL4SSR_Online_Full_AdblockPlus.ini](https://github.com/ZJU-Rule/ZJU-Rule/blob/master/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini)，添加了 [ZJU.list](https://github.com/ZJU-Rule/ZJU-Rule/blob/master/Clash/ZJU.list)。如要修改规则分组，请 Fork 本项目，自行搭建 [subconverter](https://github.com/tindy2013/subconverter) 并编辑 [ZJU.ini](https://github.com/ZJU-Rule/ZJU-Rule/blob/master/Clash/config/ZJU.ini) 进行转换
+
++ 使用公用 ZJU Rule 转换服务会泄露我的订阅链接吗？
+
+  公用转换服务不会对用户的订阅链接进行储存。也可以自行搭建 [subconverter](https://github.com/tindy2013/subconverter) 并使用 ZJU Rule 规则进行转换
+
++ 我可以为 Clash 外的其他客户端生成订阅链接吗？
   
-# 安卓 SSR 去广告ACL规则
-  * 屏蔽小米手机和魅族flyme rom系统广告
-  * 国内网站均直接连接
-  * 屏蔽常用视频网站广告
-  * 屏蔽常用网站广告、其他流媒体网站广告
-  * 屏蔽部分应用程序开屏广告
-  * 屏蔽部分运营商劫持网页弹出的漂浮球广告、流量统计
-  * 拦截常用应用程序的隐私跟踪、行为分析、数据统计
+  可以在 [ZJU Rule 转换网站](https://zjurule.xyz/)中更改客户端。也可以直接更改链接中的 target 参数。请参考 [subconverter](https://github.com/tindy2013/subconverter) 文档
 
++ 我可以对 ZJU Rule 进行完善吗？
 
+  欢迎通过 Issue 提出意见或建议，或提交 Pull Request 完善规则。ZJU 内网规则之外的规则请向项目上游 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master) 进行反馈，上游不予采纳时也可以向 ZJU Rule 提交
 
-# 版本解释
+## 致谢
 
-## SSR直接可用的规则
-
-文件               | 默认  | 去广告  | 局域网 |   国内IP段  |   国内域名    |     国外
-----              | ----  |  ----  | ----  |   ----     |     ----     |    ----
-[banAD.acl](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Acl/banAD.acl)         |  代理  |   是   |  直连  |    有-直连  | 常用域名-直连  |  代理-常用国外域名增强
-[onlybanAD.acl](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Acl/onlybanAD.acl)     |  代理  |   是   |  直连  |    无      |    无         |  代理-常用国外域名增强
-[nobanAD.acl](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Acl/nobanAD.acl)       |  代理  |   否   |  直连  |    有-直连  |  常用域名-直连 |  全局代理
-[backcn-banAD.acl](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Acl/backcn-banAD.acl)  |  代理  |   是   |  直连  |    有-代理  |    无         | 直连-gfwlist列表 
-[gfwlist-banAD.acl](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Acl/gfwlist-banAD.acl) |  直连  |   是   |  直连  |    无      |    无         |  代理-gfwlist列表
-[fullgfwlist.acl](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Acl/fullgfwlist.acl )   |  直连  |   否   |  直连  |    无      |    无         |  代理-gfwlist列表
-[gfwlist-user.rule](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Acl/gfwlist-user.rule) |  直连  |   是   |  直连  |    无      |     无        |  代理-gfwlist列表
-
-
-
-## 其他规则转换 clash Quantumul Surge Surfboard Trojan
-
-​	前后端都是开源的，自己随便搭建。自建的话，只自建后端已经足够
-
-前端：[sub-web]( https://github.com/CareyWang/sub-web)
-
-后端：[subconverter](https://github.com/tindy2013/subconverter/blob/master/README-cn.md) 
-
-**支持类型**
-
-| 类型                         | 作为源类型 | 作为目标类型 | 参数                |
-| ---------------------------- | :--------: | :----------: | ------------------- |
-| Clash                        |     ✓      |      ✓       | clash               |
-| ClashR                       |     ✓      |      ✓       | clashr              |
-| Quantumult (完整配置)        |     ✓      |      ✓       | quan                |
-| Quantumult X (完整配置)      |     ✓      |      ✓       | quanx               |
-| Loon                         |     ✓      |      ✓       | loon                |
-| Mellow                       |     ✓      |      ✓       | mellow              |
-| SS (SIP002)                  |     ✓      |      ✓       | ss                  |
-| SS (软件订阅)                |     ✓      |      ✓       | sssub               |
-| SSD                          |     ✓      |      ✓       | ssd                 |
-| SSR                          |     ✓      |      ✓       | ssr                 |
-| Surfboard                    |     ✓      |      ✓       | surfboard           |
-| Surge 2                      |     ✓      |      ✓       | surge&ver=2         |
-| Surge 3                      |     ✓      |      ✓       | surge&ver=3         |
-| Surge 4                      |     ✓      |      ✓       | surge&ver=4         |
-| Trojan                       |     ✓      |      ✓       | trojan              |
-| V2Ray                        |     ✓      |      ✓       | v2ray               |
-| 类 TG 代理的 HTTP/Socks 链接 |     ✓      |      ×       | 仅支持 `&url=` 调用 |
-
-
-
-## Clash规则碎片
-
-主要文件在clash文件夹下，只是一些规则碎片，可以配合一些订阅转换进行使用。
-
-具体怎么使用需要看对应软件配置是怎么写的，还要请大家阅读你所使用的软件文档，看是否能使用
-
-示例：项目里/Clash/config/目录下存放的是 [subconverter](https://github.com/tindy2013/subconverter/blob/master/README-cn.md#外部配置)的 配置示例
-
-| 文件                   | 类型                 | 解释                                                         |
-| ---------------------- | -------------------- | ------------------------------------------------------------ |
-| BanAD.list             | 规则碎片-去广告      | 只包含常见广告关键字、广告联盟。无副作用，放心使用           |
-| BanProgramAD.list      | 规则碎片-去广告      | 包含常用应用的各种去广告规则。可能有轻微副作用，可放心使用。（如果网站功能和广告冲突，会删掉去广告规则） |
-| BanEasyListChina.list  | 规则碎片-去广告      | AdblockPlus中的中国所有的屏蔽域名                            |
-| LocalAreaNetwork.list  | 规则碎片-直连        | 本地地址和路由器直连域名啥的                                 |
-| ChinaDomain.list       | 规则碎片-直连        | 国内常见域名、直连CDN等。（很全，常用网址都有）              |
-| ChinaCompanyIp.list    | 规则碎片-直连        | 国内BAT公司及云服务厂商的IP段。所有在该云服务上的网站都可以直连。比如你网站在阿里云香港都可以直连。 |
-| ChinaIp.list           | 规则碎片-直连        | IPIP的国内地址段。比GeoIp更好。电脑性能好，可以引入          |
-| Download.list          | 规则碎片-直连        | 一些下载用的域名                                             |
-| Apple.list             | 规则碎片             | 苹果公司的所有域名                                           |
-| Microsoft.list         | 规则碎片             | 微软公司的所有域名                                           |
-| OneDrive.list          | 规则碎片             | OneDrive                                                     |
-| GoogleCN.list          | 规则碎片-直连        | 谷歌在中国能直连的网址列表                                   |
-| Telegram.list          | 规则碎片-代理        | Telegram的所有域名                                           |
-| Netflix.list           | 规则碎片-代理        | Netflix的所有域名                                            |
-| ProxyGFWlist.list      | 规则碎片-代理        | GFW的全量列表                                                |
-| ProxyLite.list         | 规则碎片-代理        | 比较精简的代理列表，包含常用的，以及被污染的域名             |
-| GeneralClashConfig.yml | clash配置文件        | 放行一堆国内的常用域名，配合系统代理更牛逼。 配置很全，自带中文注释。可以自行使用 |
-| pref.ini               | subconverter配置文件 | 更改了一些基础配置，将规则变成ACL4SSR                        |
-
-
-
-# ♻️ SS/SSR ACL Files Download：
-* ACL更新地址（**白名单**）：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/banAD.acl
-* ACL更新地址（**黑名单**）：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/gfwlist-banAD.acl
-* ACL更新地址（**全局**）：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/onlybanAD.acl
-* ACL更新地址（**仅GFWList**）：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/fullgfwlist.acl （原版SS**能且仅能**使用此规则）
-* ACL更新地址（**国内代理**）：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/backcn-banAD.acl
-* ACL更新地址（**白名单，无去广告**）：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/nobanAD.acl
-* SSR C# GFWList user.rule ：https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/gfwlist-user.rule
-
-
-* SS：https://github.com/shadowsocks
-* SSR-WIN：https://github.com/shadowsocksr/shadowsocksr-csharp/releases
-* SSR-安卓：https://github.com/shadowsocksr/shadowsocksr-android/releases
-
-# ♻️ Surge/Shadowrocket Config File Download：
-* 请到相关项目页面根据说明配置 https://github.com/lhie1/Rules
-
-📋 教程 / 说明：
-* 打开SSR->路由->自定义acl文件->输入下载地址->更新
-* 再次更新，点击软件页面底部的更新即可
-
-
-# Root手机推荐：
-* 1.自带去广告的VIA浏览器 http://www.coolapk.com/apk/mark.via
-* 2.HOSTS 广告快走中国版 http://www.coolapk.com/apk/mark.via
-* 3.HOSTS 广告快走开AdAway http://www.coolapk.com/apk/org.adaway
-* https://github.com/neko-dev/neohosts
-* Google Hosts 请移步 https://github.com/googlehosts/hosts
-
-
-# 注：
-* 参照lhie1大神的surge规则改编，致谢!! https://github.com/lhie1/Surge
-
-* 浏览器内部广告太多了，单凭几百条规则可能过滤不过来。少许遗漏，请谅解
-
-* 有问题请发issue,说明状况和所用规则。
-
-* temp文件夹为历史存档 要找以前的版本可以下那个
-	
-
-# License		
-[![](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
-* CC-BY-SA-4.0
++ [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master)
++ [subconverter](https://github.com/tindy2013/subconverter)
++ [Clash](https://github.com/Dreamacro/clash)
