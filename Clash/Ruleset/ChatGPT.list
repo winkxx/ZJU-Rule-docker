@@ -1,7 +1,8 @@
-# ChatGPT
+# ChatGPT and New Bing
 
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,ai.com
 DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,deepl.com
 DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,bing.com
