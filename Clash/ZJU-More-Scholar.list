@@ -3,6 +3,7 @@
 # 不可与 ZJU.list 中的学术资源重复
 DOMAIN-SUFFIX,canvas-user-content.com
 DOMAIN-KEYWORD,illinois
+DOMAIN-SUFFIX,iclicker.com
 DOMAIN-SUFFIX,emerald.com
 DOMAIN-SUFFIX,ieee.org
 DOMAIN-SUFFIX,proquest.com
