@@ -13,7 +13,7 @@ RUN apk add tzdata && \
 COPY /Clash/config
 /ZJU.ini /base
 
-EXPOSE 25500
+EXPOSE 5000
 
 WORKDIR /base
 
